@@ -21,23 +21,23 @@
 
     ##4 - Получить первые 10 символов строки.
     $str4 = "AaBbCcDdEeFfGgHhIiKk";
-    $first10Symbols = substr($str4, 0, 10);   #AaBbCcDdEe
+    $first10Symbols = mb_substr($str4, 0, 10);   #AaBbCcDdEe
 
 
     ##5 - Получить последние 10 символов строки.
     $str5 = "AaBbCcDdEeFfGgHhIiKk";
-    $last10Symbols = substr($str5, -10);  #FfGgHhIiKk
+    $last10Symbols = mb_substr($str5, -10);  #FfGgHhIiKk
 
 
     ##6 - Строка А содержит подстроку B. Вывести все, что находится слева от строки B.
     $a6 = "HEY ssshey Heyaa hEllo HELLO YO";
     $b6 ="hey Hey";
-    $length = strpos($a6,$b6);
-    $firstSymbols = substr($a6, 0, $length);  #HEY sss
+    $length = mb_strpos($a6,$b6);
+    $firstSymbols = mb_substr($a6, 0, $length);  #HEY sss
 
 
     ##7 - Строка А содержит подстроку B. Вывести все, что находится справа строки B.
     $a7 = "HEY ssshey Heyaa hEllo HELLO YO";
     $b7 ="hey Hey";
-    $startIndex = strpos($a7,$b7) + strlen($b7);
-    $lastSymbols = substr($a7, $startIndex);  #aa hEllo HELLO YO
+    $startIndex = mb_strpos($a7,$b7) + strlen($b7);
+    $lastSymbols = mb_substr($a7, $startIndex);  #aa hEllo HELLO YO
